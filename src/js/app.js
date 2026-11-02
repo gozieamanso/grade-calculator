@@ -6,7 +6,6 @@ const englishInput = document.querySelector('#englishInput');
 const computerInput = document.querySelector('#computerInput');
 
 const resultBox = document.querySelector('#resultBox');
-// resultBox.classList.remove('hidden');
 
 // results
 const nameResult = document.querySelector('#nameResult');
@@ -71,7 +70,7 @@ function calculate(event){
 
     gradeDisplay.textContent = `Your grade is: ${grade}`
     remarkDisplay.textContent = remark;
+    resultBox.classList.remove('hidden');
 }
-resultBox.classList.remove('hidden');
 
 resultForm.addEventListener('submit', calculate)

@@ -190,9 +190,6 @@
   }
 }
 @layer utilities {
-  .invisible {
-    visibility: hidden;
-  }
   .visible {
     visibility: visible;
   }
@@ -202,14 +199,8 @@
   .mbs-6 {
     margin-block-start: calc(var(--spacing) * 6);
   }
-  .mb-0 {
-    margin-bottom: 0px;
-  }
   .mb-5 {
     margin-bottom: calc(var(--spacing) * 5);
-  }
-  .block {
-    display: block;
   }
   .flex {
     display: flex;
@@ -222,6 +213,9 @@
   }
   .h-dvh {
     height: 100dvh;
+  }
+  .min-h-dvh {
+    min-height: 100dvh;
   }
   .max-w-md {
     max-width: var(--container-md);
@@ -265,31 +259,12 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-0 {
-    border-style: var(--tw-border-style);
-    border-width: 0px;
-  }
   .border-1 {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-amber-500 {
-    border-color: var(--color-amber-500);
-  }
-  .border-sky-300 {
-    border-color: var(--color-sky-300);
-  }
   .border-sky-600 {
     border-color: var(--color-sky-600);
-  }
-  .border-sky-950 {
-    border-color: var(--color-sky-950);
-  }
-  .bg-amber-50 {
-    background-color: var(--color-amber-50);
-  }
-  .bg-amber-800 {
-    background-color: var(--color-amber-800);
   }
   .bg-sky-200 {
     background-color: var(--color-sky-200);
@@ -321,17 +296,14 @@
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
-  .p-5 {
-    padding: calc(var(--spacing) * 5);
-  }
   .p-8 {
     padding: calc(var(--spacing) * 8);
   }
-  .p-10 {
-    padding: calc(var(--spacing) * 10);
-  }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
+  }
+  .py-6 {
+    padding-block: calc(var(--spacing) * 6);
   }
   .text-center {
     text-align: center;
@@ -342,10 +314,6 @@
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
   .text-lg {
     font-size: var(--text-lg);
@@ -410,6 +378,11 @@
     --tw-scale-y: 95%;
     --tw-scale-z: 95%;
     scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  @media (width >= 48rem) {
+    .md\:h-dvh {
+      height: 100dvh;
+    }
   }
 }
 @property --tw-space-y-reverse {
