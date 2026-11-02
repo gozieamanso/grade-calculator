@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Grade Calculator</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+<body class="font-poppins bg-linear-to-b from-sky-950 to-sky-600 h-dvh flex justify-center items-center px-6">
+    <form id="resultForm" class="bg-white flex flex-col p-8 max-w-md rounded-4xl">
+        <h1 class="text-2xl font-bold text-center">Student Result Calculator</h1>
+        <p class="text-md text-center mb-5">Enter your scores below</p>
+
+        <div class=" flex flex-col gap-4">
+            <input id="nameInput" class="p-2 border-1 rounded-lg focus:outline-1 focus:outline-sky-600 focus:border-none" type="text" placeholder="Student Name" required autocomplete="on">
+            <input id="mathsInput" class="p-2 border-1 rounded-lg focus:outline-1 focus:outline-sky-600 focus:border-none" type="number" placeholder="Mathematics score" min="0" max="100" step="any" required>
+            <input id="englishInput" class="p-2 border-1 rounded-lg focus:outline-1 focus:outline-sky-600 focus:border-none" type="number" placeholder="English score" min="0" max="100" step="any" required>
+            <input id="computerInput" class="p-2 border-1 rounded-lg focus:outline-1 focus:outline-sky-600 focus:border-none" type="number" placeholder="Computer score" min="0" max="100" step="any" required>
+        </div>
+
+        <button class="bg-sky-600 mbs-4 p-2 rounded-lg text-white tracking-wide cursor-pointer transition-all duration-300 hover:bg-sky-800 active:scale-95">Calculate Result</button>
+
+        <div class="bg-sky-200 mbs-6 p-3 rounded-lg flex flex-col gap-3">
+            <h3>Your result will appear here ↓</h3>
+            <hr class="border-sky-600 ">
+
+            <div id="resultBox" class="space-y-3 hidden text-lg">
+                <div id="nameResult"></div>
+
+                <div id="mathsResult"></div>
+                <div id="engResult"></div>
+                <div id="compResult"></div>
+
+                <div id="totalResult" class="font-semibold"></div>
+                <div id="average" class="font-semibold"></div>
+
+                <div id="gradeDisplay" class="font-semibold text-xl text-green-600"></div>
+                <div id="remarkDisplay" class="font-semibold text-xl text-green-600"></div>
+            </div>
+        </div>
+    </form>
+
+    <script src="src/js/app.js"></script>
+</body>
+</html>
